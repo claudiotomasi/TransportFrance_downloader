@@ -12,6 +12,11 @@ from downloader.download import download_file
 from downloader.extractor import extract_zip_file
 from downloader.logger import merge_error_logs
 
+proxies = {
+    "http": None,
+    "https": None,
+}
+
 
 accepted_formats = ['NeTEx','ods','turtle','parquet','zip','gpx','xml','gpkg','xls','SSIM','gtfs-rt','json','ogc:wfs',
                     'SIRI Lite','png','shp','geojson','web','octet-stream','ogc:wms','html','plain','n3','xlsx','GTFS',
@@ -22,7 +27,7 @@ def process_dataset(ds_id, dataset_attributes, output_folder):
     """Collect all download jobs (url, resource_folder) for a dataset."""
     BASE_URL = f"https://transport.data.gouv.fr/api/datasets/{ds_id}"
     try:
-        response = requests.get(BASE_URL, timeout=30)
+        response = requests.get(BASE_URL, proxy = proxy, timeout=30)
         response.raise_for_status()
         single_ds = response.json()
     except Exception as e:

@@ -5,6 +5,11 @@ from .utils import sanitize_filename
 from .utils import get_filename_from_cd
 
 
+proxies = {
+    "http": None,
+    "https": None,
+}
+
 def download_file(url, resource_folder, thread_id):
     """Download a single file and return success/error message."""
 
@@ -16,7 +21,7 @@ def download_file(url, resource_folder, thread_id):
 
     zip_path = None
     try:
-        with requests.get(url, stream=True, headers = headers, timeout=60) as r:
+        with requests.get(url, proxies = proxies, stream=True, headers = headers, timeout=60) as r:
             # cd = r.headers.get("Content-Disposition")
             # if cd and "filename=" in cd:
             #     filename = cd.split("filename=")[1].strip('"')
