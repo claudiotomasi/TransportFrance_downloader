@@ -84,12 +84,14 @@ python main.py --max-threads 8
 
 Downloaded files are organized as:
 
+```
 output_directory/
 ├── Dataset_Title/
 │   ├── Format/
 │   │   ├── Resource_Title_YYYY-MM-DD/
 │   │   │   ├── file1.zip
 │   │   │   └── file2.csv
+```
 
 If -zip is used, ZIP files will be extracted into a folder with the same name as the ZIP:
 ```bash
