@@ -116,9 +116,5 @@ file1.zip -> file1/
 All dependencies can be installed via:
 ```bash
 pip install -r requirements.txt
-
-
-
-
-
+```
 
