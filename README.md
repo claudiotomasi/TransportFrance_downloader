@@ -118,3 +118,11 @@ All dependencies can be installed via:
 pip install -r requirements.txt
 ```
 
+---
+
+## License
+
+This project is released under the MIT License. You are free to use, modify, and distribute the code, provided that the original copyright notice and this permission notice are included in all copies or substantial portions of the software.
+
+
+

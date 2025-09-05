@@ -27,7 +27,7 @@ parser.add_argument(
 parser.add_argument(
         "-o", "--output-directory",
         type=str,
-        default="./downloadsss",
+        default="./downloads",
         help="Directory where downloaded files will be saved (default: ./downloads)."
 )
 args = parser.parse_args()
