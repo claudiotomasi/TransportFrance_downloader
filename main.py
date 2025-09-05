@@ -11,11 +11,6 @@ import time
 from downloader.process_data import start_process
 from downloader.utils import get_max_workers
 
-proxies = {
-    "http": None,
-    "https": None,
-}
-
 
     
 parser = argparse.ArgumentParser(description="Download datasets with optional ZIP extraction.")
@@ -45,7 +40,7 @@ output_folder = args.output_directory
 os.makedirs(output_folder, exist_ok=True)
 
 BASE_URL = "https://transport.data.gouv.fr/api/datasets"
-response = requests.get(BASE_URL, proxies = proxies)
+response = requests.get(BASE_URL)
 response.raise_for_status()
 dataset = response.json()
 

@@ -1,0 +1,8 @@
+❌ Error with file in folder ./france/Réseau urbain Yélo/SIRI/API SIRI du réseau Rochelais_2025-09-03
+ Error downloading at url: https://api.okina.fr/gateway/nam/realtime/anshar/ws/services/?datasetId=CA_LA_ROCHELLE
+ --405 Client Error: Method Not Allowed for url: https://api.okina.fr/gateway/nam/realtime/anshar/ws/services/?datasetId=CA_LA_ROCHELLE
+
+❌ Error with file in folder ./france/Réseau urbain Irigo/SIRI Lite/API temps réel au format SIRI_2024-05-29
+ Error downloading at url: https://ara-api.enroute.mobi/irigo/siri
+ --401 Client Error: Unauthorized for url: https://ara-api.enroute.mobi/irigo/siri
+
